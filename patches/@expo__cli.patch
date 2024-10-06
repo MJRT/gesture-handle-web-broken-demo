@@ -1,0 +1,13 @@
+diff --git a/build/src/start/server/middleware/inspector/LaunchBrowser.js b/build/src/start/server/middleware/inspector/LaunchBrowser.js
+index e48b0a306897c103a3b8db3e7c7f1ee147239e29..9b503617b465c45d68441c3542d09042805cf0b8 100644
+--- a/build/src/start/server/middleware/inspector/LaunchBrowser.js
++++ b/build/src/start/server/middleware/inspector/LaunchBrowser.js
+@@ -34,7 +34,7 @@ function createLaunchBrowser() {
+     let launchBrowser;
+     if (_os().default.platform() === "darwin") {
+         launchBrowser = new _launchBrowserImplMacOS.default();
+-    } else if (_os().default.platform() === "win32" || IS_WSL) {
++    } else if (_os().default.platform() === "win32") {
+         launchBrowser = new _launchBrowserImplWindows.default();
+     } else if (_os().default.platform() === "linux") {
+         launchBrowser = new _launchBrowserImplLinux.default();
